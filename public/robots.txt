@@ -1,0 +1,40 @@
+# GBL Transportes - Robots.txt
+# Fecha padrão para todos os crawlers
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /temp
+Disallow: /*.json$
+Disallow: /*?*sort=
+
+# Google específico
+User-agent: Googlebot
+Allow: /
+
+# Bing específico
+User-agent: Bingbot
+Allow: /
+
+# Delay para não sobrecarregar servidor
+User-agent: *
+Crawl-delay: 1
+Request-rate: 1/10s
+
+# Sitemap
+Sitemap: https://gbltransportes.com.br/sitemap.xml
+Sitemap: https://gbltransportes.com.br/sitemap-index.xml
+
+# Host
+Host: https://gbltransportes.com.br
+
+# Bloqueia alguns crawlers ruins
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

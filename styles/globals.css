@@ -1,0 +1,176 @@
+/* ========================================
+   TAILWIND CSS - IMPORTAÇÕES PRINCIPAIS
+   ======================================== */
+
+/* @tailwind base: Importa reset CSS base do Tailwind (normalização de estilos nativos do HTML) */
+@tailwind base;
+
+/* @tailwind components: Importa componentes predefinidos do Tailwind (disponíveis via @apply) */
+@tailwind components;
+
+/* @tailwind utilities: Importa todas as classes utilitárias do Tailwind (ex: flex, grid, p-4, etc) */
+@tailwind utilities;
+
+/* ========================================
+   RESET GLOBAL - ZERA ESPAÇAMENTOS PADRÃO
+   ======================================== */
+
+/* 
+  * selector: Afeta TODOS os elementos da página
+  - Remova margin padrão (espaço externo)
+  - Remova padding padrão (espaço interno)
+  - Use border-box para cálculos de tamanho mais previsíveis
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   COMPORTAMENTO HTML - SCROLL SUAVE
+   ======================================== */
+
+/*
+  scroll-behavior: smooth;
+  - Ativa rolagem suave ao clicar em links âncora (#contato, #servicos)
+  - Transição visual mais profissional ao navegar dentro da página
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   ESTILO BODY - FONTES E RENDERIZAÇÃO
+   ======================================== */
+
+/*
+  Font Stack (ordem de preferência):
+  1. -apple-system (San Francisco - macOS/iOS)
+  2. BlinkMacSystemFont (alternativa macOS)
+  3. 'Segoe UI' (Windows)
+  4. 'Roboto' (Android)
+  5. 'Oxygen', 'Ubuntu', 'Cantarell' (Linux)
+  6. 'Fira Sans', 'Droid Sans' (alternativas Linux)
+  7. 'Helvetica Neue' (fallback)
+  8. sans-serif (última opção - qualquer fonte sem-serifa)
+  
+  Resultado: Cada sistema operacional usa sua fonte nativa = design coeso
+*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+  /*
+    Suavização de fontes (rendering):
+    -webkit-font-smoothing: antialiased
+    → Melhora qualidade de renderização em navegadores WebKit (Chrome, Safari)
+    → Texto mais nítido e legível
+  */
+  -webkit-font-smoothing: antialiased;
+  
+  /*
+    -moz-osx-font-smoothing: grayscale
+    → Suavização específica para Firefox em macOS
+    → Renderização consistente com WebKit
+  */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   LOGO IMAGE - DIMENSIONAMENTO SEGURO
+   ======================================== */
+
+/*
+  Selector: img[alt="GBL Transportes"]
+  → Seleciona APENAS imagens com alt="GBL Transportes"
+  → Evita afetar outras imagens do site
+  
+  Purpose: Limitar logo a 15% da altura/largura da viewport
+  → Logo responsiva que não domina a página
+  → Mantém proporção original (auto)
+*/
+img[alt="GBL Transportes"] {
+  max-height: 15%;     /* Altura máxima = 15% do container pai */
+  max-width: 15%;      /* Largura máxima = 15% do container pai */
+  display: block;      /* Remove espaço inline padrão */
+  height: auto;        /* Altura ajusta automaticamente */
+  width: auto;         /* Largura ajusta automaticamente */
+}
+
+/* ========================================
+   KEYFRAMES - ANIMAÇÕES REUTILIZÁVEIS
+   ======================================== */
+
+/*
+  @keyframes fadeIn:
+  Animação que aumenta a opacidade de 0 a 100%
+  
+  Uso: Fazer elementos aparecerem gradualmente (fade in)
+  Exemplo: Hero section texto ao carregar página
+*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;        /* Começa invisível */
+  }
+  to {
+    opacity: 1;        /* Termina visível */
+  }
+}
+
+/*
+  @keyframes slideUp:
+  Animação que move elemento para cima + aumenta opacidade
+  
+  Uso: Fazer elementos subirem ao aparecer (efeito "pop")
+  Exemplo: Box de estatísticas (500+, 200+, 24/7, 99%)
+  
+  Explicação dos valores:
+  - translateY(30px): Começa 30 pixels para BAIXO
+  - opacity: 0: Começa invisível
+  - Termina em posição normal + visível
+  → Resultado: elemento sobe suavemente
+*/
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);  /* Posição inicial: 30px abaixo */
+    opacity: 0;                   /* Começa invisível */
+  }
+  to {
+    transform: translateY(0);     /* Posição final: posição normal */
+    opacity: 1;                   /* Termina visível */
+  }
+}
+
+/* ========================================
+   CLASSES DE ANIMAÇÃO - APLICAÇÃO
+   ======================================== */
+
+/*
+  .animate-fade-in
+  Aplica a animação fadeIn com tempo de 0.6 segundos
+  
+  Tempo: 0.6s = 600 milissegundos
+  Curva: ease-out = começa rápido, termina devagar (efeito natural)
+  
+  Uso no HTML: className="animate-fade-in"
+  Exemplo: Texto principal do hero section
+*/
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/*
+  .animate-slide-up
+  Aplica a animação slideUp com tempo de 0.8 segundos
+  
+  Tempo: 0.8s = 800 milissegundos (mais lento que fadeIn)
+  Curva: ease-out = movimento natural
+  
+  Uso no HTML: className="animate-slide-up"
+  Exemplo: Box com estatísticas (500+, 200+, 24/7, 99%)
+*/
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
