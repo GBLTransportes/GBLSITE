@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
 
     // Aqui você poderia integrar com um serviço de email real
     // Como SendGrid, Mailgun, AWS SES, etc.
-    // await sendEmail({ to: 'contato@gbltransportes.com.br', ...sanitizedData })
+    // await sendEmail({ to: 'sac1@gbltransportes.com.br', ...sanitizedData })
 
     return NextResponse.json(
       { success: true, message: 'Mensagem enviada com sucesso!' },

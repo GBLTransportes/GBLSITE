@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📧 contato@gbltransportes.com.br</li>
+              <li>📧 sac1@gbltransportes.com.br</li>
               <li>📱 (11) 98204-3652</li>
               <li>📍 São Paulo, SP</li>
             </ul>

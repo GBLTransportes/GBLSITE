@@ -7,7 +7,7 @@
 | O que? | Arquivo | Linha | O quê trocar? |
 |--------|---------|-------|---------------|
 | **Nome da empresa** | `app/layout.tsx` | 8-9 | "GBL Transportes" |
-| **Email** | `components/Footer.tsx` | ~46 | contato@gbltransportes.com.br |
+| **Email** | `components/Footer.tsx` | ~46 | sac1@gbltransportes.com.br |
 | **WhatsApp** | Procure no projeto | - | 5511982043652 |
 | **Cores primárias** | `tailwind.config.ts` | ~6-11 | #0F2B5F, #D4A337 |
 | **Missão/Visão** | `components/AboutSection.tsx` | ~16-30 | Altere textos |

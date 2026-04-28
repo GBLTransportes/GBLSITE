@@ -10,7 +10,7 @@ export default function StructuredData() {
     image: 'https://gbltransportes.com.br/images/LogotipoGBL.png',
     description: 'GBL Transportes - Soluções inteligentes em transporte rodoviário, armazenagem, cross docking e WMS. Cobertura nacional e garantia de entrega.',
     telephone: '+5511982043652',
-    email: 'contato@gbltransportes.com.br',
+    email: 'sac1@gbltransportes.com.br',
     
     address: {
       '@type': 'PostalAddress',
@@ -48,7 +48,7 @@ export default function StructuredData() {
       area_served: 'BR',
       available_language: 'pt-BR',
       telephone: '+5511982043652',
-      email: 'contato@gbltransportes.com.br',
+      email: 'sac1@gbltransportes.com.br',
     },
 
     openingHoursSpecification: [

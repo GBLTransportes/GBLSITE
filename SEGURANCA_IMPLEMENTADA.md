@@ -266,7 +266,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY!)
 
 // Em produção:
 await sendgrid.send({
-  to: 'contato@gbltransportes.com.br',
+  to: 'sac1@gbltransportes.com.br',
   from: 'noreply@gbltransportes.com.br',
   subject: `Novo contato: ${sanitizedData.name}`,
   html: `...`

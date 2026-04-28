@@ -61,7 +61,7 @@ export default function ContactSection() {
             <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-lg">
               <div className="text-3xl mb-3">📧</div>
               <h3 className="font-bold mb-2">Email</h3>
-              <p className="text-gray-200">contato@logitrans.com.br</p>
+              <p className="text-gray-200">sac1@gbltransportes.com.br</p>
             </div>
           </div>
           <div className="animate-slide-up">
