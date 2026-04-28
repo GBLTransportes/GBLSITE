@@ -193,7 +193,7 @@ for (let i = 0; i < 10; i++) {
     body: JSON.stringify({
       name: 'Test User',
       email: 'test@example.com',
-      phone: '1234567890',
+      phone: '11982043652',
       message: 'Test message'
     })
   })
@@ -211,7 +211,7 @@ await fetch('/api/contact', {
   body: JSON.stringify({
     name: 'Test',
     email: 'not-an-email',
-    phone: '1234567890',
+    phone: '11982043652',
     message: 'Test'
   })
 })

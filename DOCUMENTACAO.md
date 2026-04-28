@@ -8,7 +8,7 @@
 |--------|---------|-------|---------------|
 | **Nome da empresa** | `app/layout.tsx` | 8-9 | "GBL Transportes" |
 | **Email** | `components/Footer.tsx` | ~46 | contato@gbltransportes.com.br |
-| **WhatsApp** | Procure no projeto | - | 5511999999999 |
+| **WhatsApp** | Procure no projeto | - | 5511982043652 |
 | **Cores primárias** | `tailwind.config.ts` | ~6-11 | #0F2B5F, #D4A337 |
 | **Missão/Visão** | `components/AboutSection.tsx` | ~16-30 | Altere textos |
 | **Serviços** | `components/ServicesSection.tsx` | ~11 | Array de serviços |

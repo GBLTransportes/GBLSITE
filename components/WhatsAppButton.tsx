@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/5511977633351?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20informações%20sobre%20seus%20serviços"
+      href="https://wa.me/5511982043652?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20informações%20sobre%20seus%20serviços"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 z-40 animate-bounce"

@@ -25,7 +25,7 @@ export default function HeroSection() {
                 Solicitar Orçamento
               </Button>
               <Button
-                href="https://wa.me/5511977633351?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços"
+                href="https://wa.me/5511982043652?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços"
                 variant="primary"
                 size="lg"
                 className="text-center"

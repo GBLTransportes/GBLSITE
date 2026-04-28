@@ -108,7 +108,7 @@ for (let i = 0; i < 10; i++) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name: 'Test', email: 'test@test.com',
-      phone: '1234567890', message: 'Test'
+      phone: '11982043652', message: 'Test'
     })
   }).then(r => console.log(`Req ${i+1}: ${r.status}`))
 }
@@ -123,7 +123,7 @@ await fetch('/api/contact', {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
     name: 'Test', email: 'not-an-email',
-    phone: '1234567890', message: 'Test'
+    phone: '11982043652', message: 'Test'
   })
 }).then(r => console.log(r.status, r.statusText))
 // ✅ Resultado: 400 Bad Request (email inválido)

@@ -77,7 +77,7 @@ colors: {
 ### **Informações da Empresa**
 - **Nome**: Edite em [components/Header.tsx](components/Header.tsx) (linha ~8)
 - **Email**: Procure `contato@gbltransportes.com.br`
-- **WhatsApp**: Procure `5511999999999`
+- **WhatsApp**: Procure `5511982043652`
 - **Endereço**: Edite em [components/Footer.tsx](components/Footer.tsx)
 
 ### **Logo**
@@ -193,7 +193,7 @@ Para adicionar/modificar:
 
 **GBL Transportes**
 - Email: contato@gbltransportes.com.br
-- WhatsApp: (11) 9999-9999
+- WhatsApp: (11) 98204-3652
 - Website: https://gbltransportes.com.br
 
 ---

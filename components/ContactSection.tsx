@@ -54,7 +54,7 @@ export default function ContactSection() {
             <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-lg">
               <div className="text-3xl mb-3">📞</div>
               <h3 className="font-bold mb-2">Telefone</h3>
-              <p className="text-gray-200">(11) 9999-9999</p>
+              <p className="text-gray-200">(11) 98204-3652</p>
             </div>
           </div>
           <div className="animate-slide-up">
@@ -143,7 +143,7 @@ export default function ContactSection() {
         <div className="text-center mt-8">
           <p className="text-gray-300 mb-4">ou fale conosco direto pelo WhatsApp:</p>
           <a
-            href="https://wa.me/5511977633351?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
+            href="https://wa.me/5511982043652?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition"

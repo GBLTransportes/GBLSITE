@@ -9,7 +9,7 @@ export default function StructuredData() {
     url: 'https://gbltransportes.com.br',
     image: 'https://gbltransportes.com.br/images/LogotipoGBL.png',
     description: 'GBL Transportes - Soluções inteligentes em transporte rodoviário, armazenagem, cross docking e WMS. Cobertura nacional e garantia de entrega.',
-    telephone: '+5511999999999',
+    telephone: '+5511982043652',
     email: 'contato@gbltransportes.com.br',
     
     address: {
@@ -47,7 +47,7 @@ export default function StructuredData() {
       contact_type: 'Customer Service',
       area_served: 'BR',
       available_language: 'pt-BR',
-      telephone: '+5511999999999',
+      telephone: '+5511982043652',
       email: 'contato@gbltransportes.com.br',
     },
 

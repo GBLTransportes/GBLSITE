@@ -26,7 +26,7 @@ export default function Header() {
             <Link href="#servicos" className="hover:text-secondary transition">Serviços</Link>
             <Link href="#contato" className="hover:text-secondary transition">Contato</Link>
             <a
-              href="https://wa.me/5511977633351?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
+              href="https://wa.me/5511982043652?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md transition"
@@ -54,7 +54,7 @@ export default function Header() {
             <Link href="#servicos" className="block hover:text-secondary py-2">Serviços</Link>
             <Link href="#contato" className="block hover:text-secondary py-2">Contato</Link>
             <a
-              href="https://wa.me/5511977633351?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
+              href="https://wa.me/5511982043652?text=Olá%20GBL%20Transportes!%20Gostaria%20de%20solicitar%20um%20orçamento"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md transition text-center"
