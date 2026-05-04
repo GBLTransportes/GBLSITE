@@ -30,7 +30,7 @@ export default function HeroSection() {
                 size="lg"
                 className="text-center"
               >
-                Fale com Consultor
+                Fale com um consultor
               </Button>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function HeroSection() {
               </div>
               <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-lg text-center">
                 <div className="text-4xl font-bold">99%</div>
-                <p className="text-sm mt-2">Performace</p>
+                <p className="text-sm mt-2">Performance</p>
               </div>
             </div>
           </div>

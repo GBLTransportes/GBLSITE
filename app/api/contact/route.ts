@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
 
     if (!EMAIL_REGEX.test(email)) {
       return NextResponse.json(
-        { error: 'Email inválido' },
+        { error: 'E-mail inválido' },
         { status: 400 }
       )
     }
