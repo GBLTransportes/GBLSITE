@@ -11,7 +11,7 @@ export default function StructuredData() {
     description: 'GBL Transportes - Soluções inteligentes em transporte rodoviário, armazenagem, cross docking e WMS. Cobertura nacional e garantia de entrega.',
     telephone: '+5511982043652',
     email: 'sac1@gbltransportes.com.br',
-
+    
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Rua Exemplo, 123',
@@ -41,7 +41,7 @@ export default function StructuredData() {
     ],
 
     priceRange: 'R$$$',
-
+    
     contactPoint: {
       '@type': 'ContactPoint',
       contact_type: 'Customer Service',
@@ -110,6 +110,7 @@ export default function StructuredData() {
           __html: JSON.stringify(schema),
         }}
       />
+      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -130,7 +131,7 @@ export default function StructuredData() {
                 name: 'Quais são os serviços de armazenagem?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Oferecemos armazenagem com temperatura controlada, cross docking e sistema WMS integrado para controle completo do estoque.',
+                  text: 'Oferecemos armazenagem com temperatura controlada, cross docking, e sistema WMS integrado para controle completo do estoque.',
                 },
               },
             ],
