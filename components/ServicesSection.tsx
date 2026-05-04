@@ -31,7 +31,7 @@ export default function ServicesSection() {
       title: 'Cross Docking',
       description: 'Transbordo eficiente sem armazenamento prolongado',
       features: [
-        'Reduz custos',
+        'Reduza custos',
         'Agilidade na distribuição',
         'Sincronização perfeita',
         'Acompanhamento contínuo',
