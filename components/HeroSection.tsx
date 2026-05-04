@@ -7,7 +7,6 @@ export default function HeroSection() {
     <section className="relative bg-gradient-to-r from-primary to-secondary text-white pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Texto */}
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Soluções Inteligentes em Transporte e Armazenagem
@@ -16,12 +15,7 @@ export default function HeroSection() {
               Conectamos sua empresa aos melhores serviços logísticos, com armazenagem segura, distribuição eficiente e entrega garantida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                href="#contato"
-                variant="outline"
-                size="lg"
-                className="text-center"
-              >
+              <Button href="#contato" variant="outline" size="lg" className="text-center">
                 Solicitar Orçamento
               </Button>
               <Button
@@ -30,12 +24,11 @@ export default function HeroSection() {
                 size="lg"
                 className="text-center"
               >
-                Fale com Consultor
+                Fale com um Consultor
               </Button>
             </div>
           </div>
 
-          {/* Imagem/Ilustração com números */}
           <div className="animate-slide-up">
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-lg text-center">
@@ -52,7 +45,7 @@ export default function HeroSection() {
               </div>
               <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-lg text-center">
                 <div className="text-4xl font-bold">99%</div>
-                <p className="text-sm mt-2">Performace</p>
+                <p className="text-sm mt-2">Performance</p>
               </div>
             </div>
           </div>

@@ -10,16 +10,14 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 bg-primary text-white shadow-lg z-50">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <Link href="/" className="flex items-center py-1">
-            <img 
+            <img
               src="/images/LogotipoGBL.png"
-              alt="GBL Transportes" 
+              alt="GBL Transportes"
               className="h-12 w-auto object-contain"
             />
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className="hover:text-secondary transition">Home</Link>
             <Link href="#sobre" className="hover:text-secondary transition">Sobre</Link>
@@ -35,10 +33,10 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white focus:outline-none"
+            aria-label="Abrir menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -46,7 +44,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 space-y-2 pb-4">
             <Link href="/" className="block hover:text-secondary py-2">Home</Link>

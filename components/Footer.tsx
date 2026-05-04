@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Empresa */}
           <div>
             <h3 className="font-bold text-lg mb-4">GBL Transportes</h3>
             <p className="text-gray-400 text-sm">
@@ -15,7 +14,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Serviços */}
           <div>
             <h4 className="font-bold mb-4">Serviços</h4>
             <ul className="space-y-2 text-sm text-gray-400">
@@ -26,13 +24,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
             <h4 className="font-bold mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📧 sac1@gbltransportes.com.br</li>
-              <li>📱 (11) 98204-3652</li>
-              <li>📍 São Paulo, SP</li>
+              <li>E-mail: sac1@gbltransportes.com.br</li>
+              <li>Telefone: (11) 98204-3652</li>
+              <li>São Paulo, SP</li>
             </ul>
           </div>
         </div>

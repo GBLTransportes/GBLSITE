@@ -5,7 +5,7 @@ import ServiceCard from './ServiceCard'
 export default function ServicesSection() {
   const services = [
     {
-      icon: '🚚',
+      icon: 'FR',
       title: 'Frete Rodoviário',
       description: 'Transporte de cargas com cobertura nacional',
       features: [
@@ -16,29 +16,29 @@ export default function ServicesSection() {
       ],
     },
     {
-      icon: '📦',
+      icon: 'AE',
       title: 'Armazenagem e Estoque',
       description: 'Espaços modernos com controle total de inventário',
       features: [
         'Centros de distribuição',
         'Temperatura controlada',
         'Monitoramento 24/7',
-        'Sistema automático',
+        'Sistemas automatizados',
       ],
     },
     {
-      icon: '🔄',
+      icon: 'CD',
       title: 'Cross Docking',
       description: 'Transbordo eficiente sem armazenamento prolongado',
       features: [
-        'Redusa custos',
+        'Reduz custos',
         'Agilidade na distribuição',
-        'Sincronização perfeita',
+        'Sincronização precisa',
         'Acompanhamento contínuo',
       ],
     },
     {
-      icon: '💾',
+      icon: 'WMS',
       title: 'Gestão Logística (WMS)',
       description: 'Sistema integrado de gerenciamento de armazém',
       features: [
@@ -49,29 +49,28 @@ export default function ServicesSection() {
       ],
     },
     {
-      icon: '🚗',
+      icon: 'DE',
       title: 'Distribuição e Entregas',
       description: 'Rede de distribuição ágil e confiável',
       features: [
         'Entregas agendadas',
         'Logística urbana eficiente',
         'Última milha garantida',
-        'Feedack do cliente',
+        'Feedback ao cliente',
       ],
     },
-
   ]
 
   const licenseInfo = {
-    title: 'Licenças & Alvarás',
-    description: 'Serviço robusto de transporte de cargas em todo Brasil',
+    title: 'Licenças e Alvarás',
+    description: 'Estrutura robusta para transporte de cargas em todo o Brasil',
     features: [
       'Alvará de funcionamento',
-      'Licença de bombeiro - AVCB',
-      'Alvará sanitário – ANVISA',
+      'Licença do Corpo de Bombeiros (AVCB)',
+      'Alvará sanitário - ANVISA',
       'Licença para transporte de produtos químicos',
-      'Licença - ANTT',
-      'Seguro RCF-DC e RCTR-C para as operações de transportes.',
+      'Licença ANTT',
+      'Seguro RCF-DC e RCTR-C para as operações de transporte.',
     ],
   }
 
@@ -85,7 +84,6 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Grid de Serviços */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
             <div key={index}>
@@ -94,14 +92,13 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Licenças e alvarás */}
         <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-lg p-8 animate-fade-in">
           <h3 className="text-2xl font-bold mb-4">{licenseInfo.title}</h3>
           <p className="text-gray-100 mb-6">{licenseInfo.description}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {licenseInfo.features.map((feature, idx) => (
               <div key={idx} className="flex items-center space-x-3">
-                <span className="text-2xl">✓</span>
+                <span className="text-2xl">+</span>
                 <span>{feature}</span>
               </div>
             ))}

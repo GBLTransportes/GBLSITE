@@ -9,11 +9,12 @@ export const metadata: Metadata = {
   title: 'GBL Transportes | Transporte e Armazenagem Profissionais | Logística Brasil',
   description:
     'GBL Transportes - Soluções inteligentes em transporte rodoviário, armazenagem, cross docking e WMS. Cobertura nacional e garantia de entrega.',
-  keywords: 'transportadora, logística, transporte rodoviário, armazenagem, cross docking, WMS, frete, logística brasil, transportadora brasil, distribuição',
+  keywords:
+    'transportadora, logística, transporte rodoviário, armazenagem, cross docking, WMS, frete, logística brasil, transportadora brasil, distribuição',
   authors: [{ name: 'GBL Transportes' }],
   creator: 'GBL Transportes',
   publisher: 'GBL Transportes',
-  
+
   robots: {
     index: true,
     follow: true,
@@ -77,9 +78,7 @@ export default function RootLayout({
       <body className="bg-white">
         <StructuredData />
         <Header />
-        <main className="pt-20">
-          {children}
-        </main>
+        <main className="pt-20">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

@@ -13,12 +13,11 @@ function checkRateLimit(ip: string): boolean {
   const limit = rateLimitMap.get(ip)
 
   if (!limit || now > limit.resetTime) {
-    rateLimitMap.set(ip, { count: 1, resetTime: now + 60000 }) // 1 min window
+    rateLimitMap.set(ip, { count: 1, resetTime: now + 60000 })
     return true
   }
 
   if (limit.count >= 5) {
-    // 5 requests por minuto
     return false
   }
 
@@ -27,7 +26,6 @@ function checkRateLimit(ip: string): boolean {
 }
 
 function sanitizeInput(input: string): string {
-  // Remover HTML tags e caracteres perigosos
   return input
     .replace(/<[^>]*>/g, '')
     .replace(/[<>\"'&]/g, (match) => {
@@ -45,7 +43,6 @@ function sanitizeInput(input: string): string {
 
 export async function POST(request: NextRequest) {
   try {
-    // 1. Rate limiting
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
@@ -54,11 +51,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 2. Parse e validação
     const body = await request.json()
     const { name, email, phone, company, message } = body
 
-    // 3. Validar campos obrigatórios
     if (!name || !email || !phone || !message) {
       return NextResponse.json(
         { error: 'Campos obrigatórios faltando: name, email, phone, message' },
@@ -66,7 +61,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 4. Validar tipos
     if (typeof name !== 'string' || typeof email !== 'string' || typeof phone !== 'string' || typeof message !== 'string') {
       return NextResponse.json(
         { error: 'Tipos de dados inválidos' },
@@ -74,7 +68,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 5. Validar comprimento
     if (name.length > 100 || email.length > 100 || phone.length > 20 || message.length > 5000) {
       return NextResponse.json(
         { error: 'Dados muito longos' },
@@ -82,7 +75,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 6. Validar formato
     if (!NAME_REGEX.test(name)) {
       return NextResponse.json(
         { error: 'Nome inválido' },
@@ -92,7 +84,7 @@ export async function POST(request: NextRequest) {
 
     if (!EMAIL_REGEX.test(email)) {
       return NextResponse.json(
-        { error: 'Email inválido' },
+        { error: 'E-mail inválido' },
         { status: 400 }
       )
     }
@@ -104,7 +96,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 7. Sanitizar inputs
     const sanitizedData = {
       name: sanitizeInput(name),
       email: sanitizeInput(email),
@@ -113,15 +104,10 @@ export async function POST(request: NextRequest) {
       message: sanitizeInput(message),
     }
 
-    // 8. NÃO logar dados sensíveis
-    console.log(`✅ Contato recebido de ${ip} às ${new Date().toISOString()}`)
-
-    // Aqui você poderia integrar com um serviço de email real
-    // Como SendGrid, Mailgun, AWS SES, etc.
-    // await sendEmail({ to: 'sac1@gbltransportes.com.br', ...sanitizedData })
+    console.log(`Contato recebido de ${ip} às ${new Date().toISOString()}`)
 
     return NextResponse.json(
-      { success: true, message: 'Mensagem enviada com sucesso!' },
+      { success: true, message: 'Mensagem enviada com sucesso!', data: sanitizedData },
       {
         status: 200,
         headers: {
@@ -132,7 +118,7 @@ export async function POST(request: NextRequest) {
       }
     )
   } catch (error) {
-    console.error('Erro ao processar contato')
+    console.error('Erro ao processar contato', error)
 
     return NextResponse.json(
       { error: 'Erro ao processar sua solicitação. Tente novamente.' },
