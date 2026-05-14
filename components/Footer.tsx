@@ -1,43 +1,63 @@
 'use client'
 
+import Link from 'next/link'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const openCookiePreferences = () => {
+    window.dispatchEvent(new Event('gbl:cookie-preferences'))
+  }
+
   return (
     <footer className="bg-primary-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Empresa */}
+      <div className="mx-auto max-w-7xl px-4 py-12">
+        <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="font-bold text-lg mb-4">GBL Transportes</h3>
-            <p className="text-gray-400 text-sm">
-              Soluções inteligentes em transporte e armazenagem para sua empresa.
+            <h3 className="mb-4 text-lg font-bold">GBL Transportes</h3>
+            <p className="text-sm text-gray-400">
+              Solucoes inteligentes em transporte e armazenagem para sua empresa.
             </p>
           </div>
 
-          {/* Serviços */}
           <div>
-            <h4 className="font-bold mb-4">Serviços</h4>
+            <h4 className="mb-4 font-bold">Servicos</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#servicos" className="hover:text-secondary">Transporte Rodoviário</a></li>
+              <li><a href="#servicos" className="hover:text-secondary">Transporte Rodoviario</a></li>
               <li><a href="#servicos" className="hover:text-secondary">Armazenagem</a></li>
               <li><a href="#servicos" className="hover:text-secondary">Cross Docking</a></li>
               <li><a href="#servicos" className="hover:text-secondary">WMS</a></li>
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
-            <h4 className="font-bold mb-4">Contato</h4>
+            <h4 className="mb-4 font-bold">Contato</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📧 sac1@gbltransportes.com.br</li>
-              <li>📱 (11) 98204-3652</li>
-              <li>📍 São Paulo, SP</li>
+              <li>Email: sac1@gbltransportes.com.br</li>
+              <li>Telefone: (11) 98204-3652</li>
+              <li>Sao Paulo, SP</li>
             </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 font-bold">Privacidade</h4>
+            <div className="space-y-2 text-sm text-gray-400">
+              <p>
+                <Link href="/privacidade" className="hover:text-secondary">
+                  Politica de Privacidade
+                </Link>
+              </p>
+              <p>
+                <button type="button" onClick={openCookiePreferences} className="hover:text-secondary">
+                  Preferencias de cookies
+                </button>
+              </p>
+              <p>Canal LGPD: sac1@gbltransportes.com.br</p>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {currentYear} GBL Transportes. Todos os direitos reservados.</p>
         </div>
       </div>

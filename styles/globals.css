@@ -174,3 +174,7 @@ img[alt="GBL Transportes"] {
 .animate-slide-up {
   animation: slideUp 0.8s ease-out;
 }
+
+body.menu-open {
+  overflow: hidden;
+}
